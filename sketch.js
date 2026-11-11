@@ -45,12 +45,18 @@ function draw() {
   strokeWeight(3);
   rect(20, 20, 660, 360);
 
-
   // Ghanaian-inspired diamond patterns
   for (let x = 70; x < 700; x += 80) {
-    drawDiamond(x, 65, 12);
+
+    // Leave space around the golden sun
+    if (x < 290 || x > 410) {
+      drawDiamond(x, 65, 12);
+    }
+
+    // Keep all bottom diamonds
     drawDiamond(x, 335, 12);
   }
+
 
 
   // Artwork title
